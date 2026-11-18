@@ -1,0 +1,32 @@
+                                                                                                                                                                       config  accuracy  route_f1  objective
+{"beta": 10.0, "emission_weight": 2.0, "p_min": 0.0001, "uturn_penalty": 5.0, "unreachable_logp": -30.0, "cutoff_factor": 2.0, "cutoff_min_m": 150.0, "cutoff_max_m": 5000.0}  0.909801  0.938540   0.924171
+                                                                                                                                                              classifier_only  0.912998  0.933394   0.923196
+{"beta": 10.0, "emission_weight": 4.0, "p_min": 0.0001, "uturn_penalty": 5.0, "unreachable_logp": -30.0, "cutoff_factor": 2.0, "cutoff_min_m": 150.0, "cutoff_max_m": 5000.0}  0.915618  0.930595   0.923107
+ {"beta": 5.0, "emission_weight": 4.0, "p_min": 0.0001, "uturn_penalty": 5.0, "unreachable_logp": -30.0, "cutoff_factor": 2.0, "cutoff_min_m": 150.0, "cutoff_max_m": 5000.0}  0.911443  0.933424   0.922433
+{"beta": 20.0, "emission_weight": 2.0, "p_min": 0.0001, "uturn_penalty": 5.0, "unreachable_logp": -30.0, "cutoff_factor": 2.0, "cutoff_min_m": 150.0, "cutoff_max_m": 5000.0}  0.915182  0.929291   0.922237
+{"beta": 10.0, "emission_weight": 2.0, "p_min": 0.0001, "uturn_penalty": 0.0, "unreachable_logp": -30.0, "cutoff_factor": 2.0, "cutoff_min_m": 150.0, "cutoff_max_m": 5000.0}  0.907687  0.936773   0.922230
+ {"beta": 5.0, "emission_weight": 8.0, "p_min": 0.0001, "uturn_penalty": 5.0, "unreachable_logp": -30.0, "cutoff_factor": 2.0, "cutoff_min_m": 150.0, "cutoff_max_m": 5000.0}  0.915881  0.926489   0.921185
+{"beta": 10.0, "emission_weight": 4.0, "p_min": 0.0001, "uturn_penalty": 0.0, "unreachable_logp": -30.0, "cutoff_factor": 2.0, "cutoff_min_m": 150.0, "cutoff_max_m": 5000.0}  0.912963  0.928540   0.920752
+{"beta": 20.0, "emission_weight": 1.0, "p_min": 0.0001, "uturn_penalty": 5.0, "unreachable_logp": -30.0, "cutoff_factor": 2.0, "cutoff_min_m": 150.0, "cutoff_max_m": 5000.0}  0.908263  0.933099   0.920681
+{"beta": 10.0, "emission_weight": 1.0, "p_min": 0.0001, "uturn_penalty": 5.0, "unreachable_logp": -30.0, "cutoff_factor": 2.0, "cutoff_min_m": 150.0, "cutoff_max_m": 5000.0}  0.899878  0.939998   0.919938
+classifier-only on tuning trips: [{'config': 'classifier_only', 'accuracy': 0.9129979035639413, 'route_f1': 0.9333941498321128, 'objective': 0.923196026698027}]
+best HMM config: HMMConfig(beta=10.0, emission_weight=2.0, p_min=0.0001, uturn_penalty=5.0, unreachable_logp=-30.0, cutoff_factor=2.0, cutoff_min_m=150.0, cutoff_max_m=5000.0)
+                 model         decoder  obs_accuracy  obs_accuracy_all  route_continuity  route_continuity_unfilled  route_precision  route_recall  route_f1  route_edit_similarity
+         decision_tree  classifier+hmm      0.911372          0.910021          0.998916                   0.884188         0.894631      0.996403  0.939970               0.765047
+         decision_tree classifier_only      0.887979          0.886691          0.819017                   0.819017         0.917752      0.974861  0.944620               0.644789
+distance_only_baseline  classifier+hmm      0.876001          0.874687          0.998884                   0.862778         0.928446      0.995518  0.958992               0.811057
+distance_only_baseline classifier_only      0.540960          0.539979          0.423593                   0.423593         0.539375      0.781271  0.636082               0.329673
+           final_tuned  classifier+hmm      0.913769          0.912422          0.999036                   0.886954         0.926977      0.995778  0.958922               0.793808
+           final_tuned classifier_only      0.899524          0.898225          0.833678                   0.833678         0.929077      0.977293  0.951937               0.671713
+           gaussian_nb  classifier+hmm      0.884412          0.883090          0.998955                   0.788938         0.825153      0.996120  0.899266               0.578394
+           gaussian_nb classifier_only      0.783254          0.782046          0.669209                   0.669209         0.705906      0.966719  0.813418               0.474570
+                   knn  classifier+hmm      0.903684          0.902349          0.999022                   0.866869         0.890422      0.996188  0.937036               0.730134
+                   knn classifier_only      0.882539          0.881263          0.777957                   0.777957         0.916529      0.977624  0.945039               0.609692
+              lightgbm  classifier+hmm      0.911570          0.910230          0.998959                   0.889956         0.937728      0.995914  0.965003               0.821690
+              lightgbm classifier_only      0.897331          0.896033          0.831979                   0.831979         0.924684      0.977455  0.949655               0.662863
+                logreg  classifier+hmm      0.902169          0.900835          0.998935                   0.868097         0.921384      0.996099  0.955017               0.778324
+                logreg classifier_only      0.884109          0.882829          0.791864                   0.791864         0.922072      0.976069  0.947389               0.628473
+                   mlp  classifier+hmm      0.906507          0.905167          0.998960                   0.882423         0.933404      0.996539  0.962629               0.813745
+                   mlp classifier_only      0.889706          0.888413          0.820977                   0.820977         0.925352      0.978257  0.950243               0.692571
+         random_forest  classifier+hmm      0.913190          0.911848          0.998954                   0.887231         0.923854      0.996099  0.955903               0.817446
+         random_forest classifier_only      0.896183          0.894885          0.835435                   0.835435         0.927690      0.976794  0.950952               0.684425

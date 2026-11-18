@@ -1,0 +1,10 @@
+{
+  "beta": 10.0,
+  "emission_weight": 2.0,
+  "p_min": 0.0001,
+  "uturn_penalty": 5.0,
+  "unreachable_logp": -30.0,
+  "cutoff_factor": 2.0,
+  "cutoff_min_m": 150.0,
+  "cutoff_max_m": 5000.0
+}
