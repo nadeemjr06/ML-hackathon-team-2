@@ -1,0 +1,27 @@
+:root { --bg:#f6f7f9; --panel:#fff; --ink:#1d2330; --muted:#6b7280; --line:#e3e6ea; --accent:#d62828; }
+* { box-sizing: border-box; }
+body { margin:0; font:14px/1.4 system-ui, -apple-system, Segoe UI, sans-serif; background:var(--bg); color:var(--ink); }
+header { display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between;
+         padding:10px 16px; background:var(--panel); border-bottom:1px solid var(--line); }
+h1 { font-size:18px; margin:0; } h1 span { font-weight:400; color:var(--muted); }
+h2 { font-size:13px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); margin:16px 0 8px; }
+.api { display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
+.api input { width:240px; padding:6px 8px; border:1px solid var(--line); border-radius:6px; font-family:monospace; }
+button { padding:6px 12px; border:1px solid var(--line); background:#fff; border-radius:6px; cursor:pointer; }
+button:hover { border-color:#9aa1ab; }
+.pill { padding:3px 8px; border-radius:999px; background:#eee; font-size:12px; }
+.pill.ok { background:#d8f3dc; color:#1b4332; } .pill.err { background:#ffd6d6; color:#7a0000; }
+main { display:flex; height:calc(100vh - 56px); }
+aside { width:340px; min-width:280px; overflow:auto; padding:0 16px 16px; background:var(--panel); border-right:1px solid var(--line); }
+#map { flex:1; }
+.trips { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+.trip { text-align:left; padding:8px; }
+.trip b { display:block; font-family:monospace; } .trip small { color:var(--muted); }
+.trip.active { border-color:var(--accent); box-shadow:0 0 0 1px var(--accent) inset; }
+.muted { color:var(--muted); }
+table { width:100%; border-collapse:collapse; margin-top:8px; font-size:13px; }
+td { padding:4px 2px; border-bottom:1px solid var(--line); } td:last-child { text-align:right; font-variant-numeric:tabular-nums; }
+tr.head td { font-weight:600; padding-top:10px; }
+.legend { background:#fff; padding:8px 10px; border-radius:6px; box-shadow:0 1px 4px rgba(0,0,0,.2); font-size:12px; line-height:1.6; }
+.sw { display:inline-block; width:18px; height:4px; vertical-align:middle; margin-right:6px; }
+@media (max-width: 760px) { main { flex-direction:column; height:auto; } aside { width:100%; } #map { height:70vh; } }

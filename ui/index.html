@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PathSnap Evaluator</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>PathSnap <span>map-matching evaluator</span></h1>
+    <div class="api">
+      <label for="api">API</label>
+      <input id="api" type="text" spellcheck="false">
+      <button id="connect">Connect</button>
+      <span id="api-status" class="pill">not connected</span>
+    </div>
+  </header>
+  <main>
+    <aside>
+      <h2>Evaluation trips</h2>
+      <div id="trips" class="trips"><p class="muted">Connect to the API to load trips.</p></div>
+      <h2>Results</h2>
+      <div id="status" class="muted">Select a trip.</div>
+      <table id="metrics"></table>
+    </aside>
+    <section id="map"></section>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
