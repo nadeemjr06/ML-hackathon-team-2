@@ -1,0 +1,11 @@
+# Minimal dependencies for Laptop 1 (API only). The scikit-learn / lightgbm versions
+# MUST match the ones used to train models/final_model.joblib.
+numpy==2.5.5
+pandas==3.1.1
+scipy==1.18.1
+scikit-learn==1.9.1
+lightgbm==4.7.0
+joblib==1.6.0
+fastapi==0.163.2
+uvicorn[standard]==0.54.0
+pydantic==2.14.3

@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+# raw data is distributed separately (symlink or copy into data/)
+data
+data/
+data_cache/
+*.log
+
+# keep experiment logs (required deliverable)
+!results/*.log
