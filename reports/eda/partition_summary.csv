@@ -1,0 +1,3 @@
+partition,trips,points,points_median,nan_values,dropped,gaps_gt_10s,nodes_median,arcs_median,isolated_nodes,route_cont_mean,unreliable_label_frac_mean
+student_test,10,19160,1420.0,0,0,27,6596.5,13145.0,0,0.9997319034852546,0.0006821627084386054
+train,80,208417,1529.0,0,0,590,9608.0,19526.5,0,0.9993461551444497,0.02486439736403668
