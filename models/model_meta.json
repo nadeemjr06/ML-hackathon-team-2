@@ -1,0 +1,52 @@
+{
+  "model": "lightgbm",
+  "params": {
+    "n_estimators": 600,
+    "learning_rate": 0.0126251634917063,
+    "num_leaves": 218,
+    "subsample": 0.9757671896958383,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.5508385408234429,
+    "random_state": 42,
+    "verbose": -1,
+    "n_jobs": -1,
+    "min_child_samples": 139,
+    "reg_lambda": 0.0643004024756793,
+    "reg_alpha": 0.14872793126687822
+  },
+  "features": [
+    "dist",
+    "dist_rank",
+    "dist_minus_min",
+    "dist_ratio",
+    "n_cands",
+    "win_dist_mean",
+    "win_dist_max",
+    "win_dist_minus_min",
+    "gauss_prob",
+    "win_gauss_prob",
+    "heading_cos",
+    "heading_sin_abs",
+    "heading_valid",
+    "along_disp",
+    "speed",
+    "proj_t",
+    "endpoint_clip",
+    "log_arc_len",
+    "from_in_deg",
+    "to_out_deg",
+    "has_reverse",
+    "dt_prev",
+    "dt_next"
+  ],
+  "seed": 42,
+  "candidate": {
+    "radius_m": 50.0,
+    "max_radius_m": 200.0,
+    "max_k": 8
+  },
+  "label_max_dist_m": 50.0,
+  "cv_top1_acc": 0.8975531300928805,
+  "student_test_top1_acc": 0.8994930225265249,
+  "created": "2026-11-18 11:11:29"
+}

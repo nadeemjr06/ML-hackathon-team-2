@@ -1,0 +1,66 @@
+train rows=1152625 (fit rows=1046666), student-test rows=113694
+
+=== logreg
+  fold 0: F1=0.9324 top1=0.8892 logloss=0.1058 (1.0s)
+  fold 1: F1=0.9274 top1=0.8860 logloss=0.1188 (0.8s)
+  fold 2: F1=0.9332 top1=0.8993 logloss=0.1037 (0.7s)
+  fold 3: F1=0.9263 top1=0.8772 logloss=0.1239 (0.7s)
+  fold 4: F1=0.9282 top1=0.8871 logloss=0.1092 (1.0s)
+  STUDENT-TEST: F1=0.9271 top1=0.8841 logloss=0.1070 continuity=0.792 train=1.1s infer=0.01s
+
+=== gaussian_nb
+  fold 0: F1=0.8279 top1=0.8113 logloss=0.7905 (2.6s)
+  fold 1: F1=0.7934 top1=0.7666 logloss=1.4310 (2.4s)
+  fold 2: F1=0.8280 top1=0.8417 logloss=0.8969 (2.3s)
+  fold 3: F1=0.7795 top1=0.6405 logloss=1.8210 (2.5s)
+  fold 4: F1=0.7809 top1=0.7395 logloss=1.3064 (2.5s)
+  STUDENT-TEST: F1=0.7960 top1=0.7831 logloss=1.1624 continuity=0.669 train=3.1s infer=0.26s
+
+=== knn
+  fold 0: F1=0.9320 top1=0.8839 logloss=0.1241 (0.0s)
+  fold 1: F1=0.9281 top1=0.8860 logloss=0.1415 (0.1s)
+  fold 2: F1=0.9358 top1=0.8984 logloss=0.1084 (0.0s)
+  fold 3: F1=0.9251 top1=0.8740 logloss=0.1432 (0.0s)
+  fold 4: F1=0.9236 top1=0.8751 logloss=0.1298 (0.0s)
+  STUDENT-TEST: F1=0.9277 top1=0.8825 logloss=0.1190 continuity=0.778 train=0.0s infer=12.42s
+
+=== decision_tree
+  fold 0: F1=0.9310 top1=0.8834 logloss=0.1152 (17.4s)
+  fold 1: F1=0.9278 top1=0.8890 logloss=0.1225 (16.3s)
+  fold 2: F1=0.9412 top1=0.9129 logloss=0.0977 (15.8s)
+  fold 3: F1=0.9272 top1=0.8817 logloss=0.1293 (17.0s)
+  fold 4: F1=0.9262 top1=0.8854 logloss=0.1091 (16.8s)
+  STUDENT-TEST: F1=0.9303 top1=0.8879 logloss=0.1019 continuity=0.819 train=21.2s infer=0.01s
+
+=== random_forest
+  fold 0: F1=0.9390 top1=0.8938 logloss=0.0904 (85.7s)
+  fold 1: F1=0.9354 top1=0.8955 logloss=0.0993 (73.5s)
+  fold 2: F1=0.9475 top1=0.9162 logloss=0.0754 (68.6s)
+  fold 3: F1=0.9342 top1=0.8846 logloss=0.0962 (72.6s)
+  fold 4: F1=0.9347 top1=0.8958 logloss=0.0928 (68.4s)
+  STUDENT-TEST: F1=0.9370 top1=0.8961 logloss=0.0847 continuity=0.835 train=106.0s infer=0.20s
+
+=== lightgbm
+  fold 0: F1=0.9394 top1=0.8935 logloss=0.0870 (9.3s)
+  fold 1: F1=0.9319 top1=0.8914 logloss=0.1007 (9.2s)
+  fold 2: F1=0.9471 top1=0.9150 logloss=0.0744 (10.0s)
+  fold 3: F1=0.9304 top1=0.8827 logloss=0.0988 (9.4s)
+  fold 4: F1=0.9337 top1=0.8959 logloss=0.0919 (9.9s)
+  STUDENT-TEST: F1=0.9385 top1=0.8973 logloss=0.0820 continuity=0.832 train=11.9s infer=0.32s
+
+=== mlp
+  fold 0: F1=0.9356 top1=0.8928 logloss=0.0925 (15.5s)
+  fold 1: F1=0.9325 top1=0.8933 logloss=0.1054 (17.5s)
+  fold 2: F1=0.9404 top1=0.9092 logloss=0.0838 (19.1s)
+  fold 3: F1=0.9307 top1=0.8841 logloss=0.1025 (10.4s)
+  fold 4: F1=0.9326 top1=0.8937 logloss=0.0951 (11.1s)
+  STUDENT-TEST: F1=0.9293 top1=0.8897 logloss=0.0928 continuity=0.821 train=15.1s infer=0.02s
+
+         model  cv_f1_macro  cv_top1_acc  st_f1_macro  st_top1_acc  st_log_loss  st_route_continuity_clf_only  inference_ms_per_1k_rows
+     lightgbm     0.936477     0.895719     0.938501     0.897298     0.082009                      0.831979                  2.843714
+random_forest     0.938166     0.897159     0.936978     0.896148     0.084654                      0.835435                  1.748898
+          mlp     0.934356     0.894621     0.929256     0.889667     0.092758                      0.820977                  0.216662
+decision_tree     0.930658     0.890490     0.930268     0.887942     0.101902                      0.819017                  0.079987
+       logreg     0.929499     0.887739     0.927065     0.884075     0.106973                      0.791864                  0.045702
+          knn     0.928936     0.883477     0.927711     0.882507     0.118992                      0.777957                109.224436
+  gaussian_nb     0.801924     0.759912     0.795958     0.783150     1.162412                      0.669209                  2.294712
